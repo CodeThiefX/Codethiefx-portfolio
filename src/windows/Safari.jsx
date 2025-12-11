@@ -6,7 +6,7 @@ import { PanelLeft, ChevronLeft, ChevronRight, ShieldHalf, Search, Share, Plus, 
 
 const Safari = () => {
   return (
-    <div className='overflow-y-auto'>
+    <div className='mx-auto'>
         <div id='window-header'>
             <WindowControls target="safari" />
 
@@ -34,25 +34,27 @@ const Safari = () => {
             </div>
         </div>
 
-        <div className='blog'>
-            <h2>My Blog</h2>
+        <div className='max-h-[600px] overflow-y-auto'>
+            <div className='blog'>
+                <h2>My Blog</h2>
 
-            <div className='space-y-8'>
-                {blogPosts.map(({ id, date, title, image, link }) => (
-                    <div key={id} className='blog-post'>
-                        <div className='col-span-2'>
-                            <img src={image} alt={title} />
-                        </div>
+                <div className='space-y-8'>
+                    {blogPosts.map(({ id, date, title, image, link }) => (
+                        <div key={id} className='blog-post'>
+                            <div className='col-span-2'>
+                                <img src={image} alt={title} />
+                            </div>
 
-                        <div className='content'>
-                            <p>{date}</p>
-                            <h3>{title}</h3>
-                            <a href={link} target='_blank' rel='nooppener noreferrer'>
-                                Check out the full post <MoveRight className='icon-hover' />
-                            </a>
+                            <div className='content'>
+                                <p>{date}</p>
+                                <h3>{title}</h3>
+                                <a href={link} target='_blank' rel='nooppener noreferrer'>
+                                    Check out the full post <MoveRight className='icon-hover' />
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     </div>
