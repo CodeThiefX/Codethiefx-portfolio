@@ -15,7 +15,7 @@ const Finder = () => {
         if(item.fileType === "pdf") return openWindow("resume");
         if(item.kind === "folder") return setActiveLocation(item);
         if(['fig', 'url'].includes(item.fileType) && item.href) 
-            return window.open(item.href, "_blank");
+            return window.open(item.href, "_blank", "noopener,noreferrer");
         
         openWindow(`${item.fileType}${item.kind}`, item);
     }
@@ -60,7 +60,7 @@ const Finder = () => {
             </div>
 
             <ul className="content">
-                {activeLocation?.children.map((item) => (
+                {activeLocation?.children?.map((item) => (
                     <li
                         key={item.id} 
                         className={`cursor-pointer `}
