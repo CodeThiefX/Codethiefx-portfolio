@@ -47,7 +47,7 @@ const Finder = () => {
     )
 
   return (
-    <>
+    <div className="">
         <div id='window-header'>
             <WindowControls target="finder" />
             <Search className="icon" />
@@ -56,7 +56,7 @@ const Finder = () => {
         <div className="bg-white flex h-full">
             <div className="sidebar">
                 {renderList('Favorites', Object.values(locations))}
-                {renderList('Projects', locations.work.children)}
+                {renderList('Projects', locations.work?.children)}
             </div>
 
             <ul className="content">
@@ -72,7 +72,7 @@ const Finder = () => {
                 ))}
             </ul>
         </div> 
-    </>
+    </div>
   )
 } 
 

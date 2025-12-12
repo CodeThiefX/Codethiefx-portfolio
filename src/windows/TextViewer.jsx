@@ -17,7 +17,7 @@ const TextViewer = () => {
             <WindowControls target="txtfile" />
         </div>
 
-        <div className="p-4 space-y-6 bg-white max-h-[600px] overflow-y-auto">
+        <div className="p-4 space-y-6 bg-white max-h-[80vh] overflow-y-auto">
             {image ? (
                 <div className="w-full">
                     <img src={image} alt={name} className="w-full h-auto rounded" />
