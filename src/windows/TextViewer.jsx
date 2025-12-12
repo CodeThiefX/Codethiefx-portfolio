@@ -2,7 +2,7 @@ import { WindowControls } from "#components"
 import WindowWrapper from "#hoc/WindowWrapper"
 import useWindowStore from "#store/window"
 
-const Text = () => {
+const TextViewer = () => {
 
     const { windows } = useWindowStore();
     const data = windows.txtfile?.data;
@@ -34,7 +34,7 @@ const Text = () => {
                 <div className="space-y-2">
                     {description.map((para, index) => (
                         <p 
-                            key={index}              className="leading-relaxed text-base"
+                            key={index} className="leading-relaxed text-base"
                         >
                             {para}
                         </p>
@@ -46,6 +46,6 @@ const Text = () => {
   );
 };
 
-const TextWindow = WindowWrapper(Text, 'txtfile')
+const TextWindow = WindowWrapper(TextViewer, 'txtfile')
 
 export default TextWindow;

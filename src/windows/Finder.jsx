@@ -24,12 +24,12 @@ const Finder = () => {
         <div>
             <h3>{name}</h3>
             <ul>
-                {items.map((item) => (
+                {items?.map((item) => (
                     <li 
                         key={item.id} 
                         onClick={() => setActiveLocation(item)}
                         className={clsx(
-                            item.id === activeLocation.id ? "active" : "not-active",
+                            item.id === activeLocation?.id ? "active" : "not-active",
                         )}
                     >
                         <img 
@@ -63,7 +63,7 @@ const Finder = () => {
                 {activeLocation?.children.map((item) => (
                     <li
                         key={item.id} 
-                        className={`cursor-pointer ${item.position}`}
+                        className={`cursor-pointer `}
                         onClick={() => openItem(item)}    
                     >
                         <img src={item.icon} alt={item.name} />
