@@ -19,6 +19,7 @@ function App() {
       <Finder />
       <TextViewer />
       <ImageViewer />
+
     </main>
   )
 }

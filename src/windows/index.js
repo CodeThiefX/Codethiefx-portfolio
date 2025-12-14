@@ -5,4 +5,4 @@ import Finder from "./Finder";
 import TextViewer from "./TextViewer";
 import ImageViewer from "./ImageViewer";
 
-export { Terminal, Safari, Resume, Finder, TextViewer, ImageViewer };
+export { Terminal, Safari, Resume, Finder, TextViewer, ImageViewer};
