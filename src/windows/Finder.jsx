@@ -7,7 +7,7 @@ import useWindowStore from "#store/window"
 import { locations } from "#constants"
 import useLocationStore from "#store/location"
 
-const Finder = () => {
+const Finder = ({ isMaximized }) => {
     const { openWindow } = useWindowStore();
     const { activeLocation, setActiveLocation } = useLocationStore();
 
@@ -47,19 +47,19 @@ const Finder = () => {
     )
 
   return (
-    <div className="">
+    <div className={isMaximized ? 'h-full flex flex-col' : ''}>
         <div id='window-header'>
             <WindowControls target="finder" />
             <Search className="icon" />
         </div>
 
-        <div className="bg-white flex h-full">
-            <div className="sidebar">
+        <div className={`bg-white flex ${isMaximized ? 'flex-1 h-0' : 'h-full'}`}>
+            <div className={`sidebar ${isMaximized ? 'h-full' : ''}`}>
                 {renderList('Favorites', Object.values(locations))}
                 {renderList('Projects', locations.work?.children)}
             </div>
 
-            <ul className="content">
+            <ul className={`content ${isMaximized ? 'h-full overflow-auto' : ''}`}>
                 {activeLocation?.children?.map((item) => (
                     <li
                         key={item.id} 

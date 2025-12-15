@@ -58,7 +58,7 @@ const WindowWrapper = (Component, windowKey) => {
                 style={{ zIndex }} 
                 className={`absolute ${
                     isMaximized 
-                        ? 'top-7 left-0 !w-screen !h-[calc(100vh-6rem)] !max-w-none !max-h-none' 
+                        ? 'top-0 left-0 !w-screen !h-screen !max-w-none !max-h-none' 
                         : 'top-16 left-20 max-w-[90vw] max-h-[85vh]'
                 }`}
             >
