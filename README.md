@@ -164,24 +164,3 @@ codethief/
 └── vite.config.js
 ```
 
-## 🎨 Development Process
-
-1. **Project Setup** - Initialized with Vite + React template, configured Tailwind CSS 4
-2. **UI Foundation** - Built the macOS-inspired navbar and dock components
-3. **Window System** - Implemented draggable, resizable windows with state management
-4. **Animation Layer** - Added GSAP and Framer Motion for smooth transitions
-5. **Content Integration** - Created individual app windows (Finder, Safari, Terminal, etc.)
-6. **State Management** - Integrated Zustand for global window and navigation state
-7. **Polish & Refinement** - Added tooltips, hover effects, and responsive design
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🤝 Connect
-
-Feel free to reach out through the Contact window in the portfolio or connect with me on social media!
-
----
-
-*Built with ❤️ by CodeThief*
