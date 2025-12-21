@@ -5,5 +5,6 @@ import Finder from "./Finder";
 import TextViewer from "./TextViewer";
 import ImageViewer from "./ImageViewer";
 import Contact from "./Contact"
+import Home from "./Home";
 
-export { Terminal, Safari, Resume, Finder, TextViewer, ImageViewer, Contact };
+export { Terminal, Safari, Resume, Finder, TextViewer, ImageViewer, Contact, Home };
