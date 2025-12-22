@@ -383,5 +383,184 @@ body {
       }
     }
   }
+
+  /* Theme Toggle Switch */
+  .theme-toggle {
+    @apply p-1 rounded-lg hover:bg-gray-200/50 transition-colors cursor-pointer;
+
+    .toggle-track {
+      @apply relative w-12 h-6 bg-gray-300 rounded-full flex items-center justify-between px-1.5 transition-colors duration-300;
+
+      &.dark {
+        @apply bg-slate-700;
+      }
+
+      .toggle-icon {
+        @apply z-10 transition-opacity duration-300;
+
+        &.sun {
+          @apply text-amber-500;
+        }
+
+        &.moon {
+          @apply text-slate-400;
+        }
+      }
+
+      .toggle-thumb {
+        @apply absolute w-5 h-5 bg-white rounded-full shadow-md transition-transform duration-300 left-0.5;
+      }
+
+      &.dark .toggle-thumb {
+        @apply transform translate-x-6;
+      }
+    }
+  }
+
+  /* Dark mode styles for windows */
+  section.dark {
+    #window-header {
+      @apply bg-[#2d2d2d] border-[#3d3d3d] text-gray-300;
+
+      h2 {
+        @apply text-gray-300;
+      }
+    }
+
+    /* Safari dark mode */
+    &#safari {
+      @apply bg-[#1e1e1e];
+
+      .search {
+        @apply bg-[#2d2d2d] border-[#3d3d3d] text-gray-300;
+
+        input {
+          @apply text-gray-300 placeholder:text-gray-500 bg-transparent;
+        }
+      }
+
+      .blog {
+        @apply bg-[#1e1e1e];
+
+        h2 {
+          @apply text-pink-400;
+        }
+
+        .blog-post .content {
+          p {
+            @apply text-gray-400;
+          }
+
+          h3 {
+            @apply text-gray-200;
+          }
+
+          a {
+            @apply text-blue-400;
+          }
+        }
+      }
+    }
+
+    /* Contact dark mode */
+    &#contact {
+      @apply bg-[#1e1e1e];
+
+      h3 {
+        @apply text-gray-200;
+      }
+
+      p {
+        @apply text-gray-400;
+      }
+    }
+
+    /* Finder dark mode */
+    &#finder {
+      @apply bg-[#1e1e1e];
+
+      .sidebar {
+        @apply bg-[#2d2d2d] border-[#3d3d3d];
+
+        h3 {
+          @apply text-gray-500;
+        }
+
+        li {
+          @apply text-gray-300;
+
+          &.active {
+            @apply bg-blue-900/50 text-blue-300;
+          }
+        }
+      }
+
+      .content {
+        @apply bg-[#1e1e1e];
+
+        li {
+          p {
+            @apply text-gray-300;
+          }
+        }
+      }
+    }
+
+    /* Photos/Gallery dark mode */
+    &#photos {
+      @apply bg-[#1e1e1e];
+
+      .sidebar {
+        @apply bg-[#2d2d2d] border-[#3d3d3d];
+
+        h2 {
+          @apply text-gray-500;
+        }
+
+        li {
+          @apply text-gray-300;
+
+          &:first-child {
+            @apply bg-blue-900/50 text-blue-300;
+          }
+        }
+      }
+
+      .gallery {
+        @apply bg-[#1e1e1e];
+      }
+    }
+
+    /* Resume dark mode */
+    &#resume {
+      @apply bg-[#1e1e1e];
+    }
+
+    /* Image viewer dark mode */
+    &#imgfile {
+      @apply bg-[#1e1e1e];
+
+      #window-header p {
+        @apply text-gray-300;
+      }
+
+      .preview {
+        @apply bg-[#2d2d2d];
+      }
+    }
+
+    /* Text viewer dark mode */
+    &#txtfile {
+      @apply bg-[#1e1e1e];
+
+      .sidebar {
+        @apply bg-[#2d2d2d] border-[#3d3d3d] text-gray-300;
+      }
+
+      .content {
+        @apply bg-[#1e1e1e] text-gray-300;
+      }
+    }
+  }
 }
 

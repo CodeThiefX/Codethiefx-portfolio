@@ -3,6 +3,7 @@ import dayjs from 'dayjs'
 import React from 'react'
 import { navIcons, navLinks } from '#constants'
 import useWindowStore from '#store/window'
+import ThemeToggle from './ThemeToggle'
 
 const Navbar = () => {
 
@@ -24,13 +25,7 @@ const Navbar = () => {
         </div>
 
         <div>
-            {/* <ul>
-                {navIcons.map(({ id, img }) => (
-                    <li key={id}>
-                        <img src={img} className='icon-hover' alt={`icon-${id}`} />
-                    </li>
-                ))}
-            </ul> */}
+            <ThemeToggle />
 
             <time>{dayjs().format("ddd MMM D h:mm A")}</time>
         </div>

@@ -1,4 +1,5 @@
 import useWindowStore from '#store/window'
+import useThemeStore from '#store/theme'
 
 import { motion } from 'framer-motion'
 // import gsap from 'gsap';
@@ -8,6 +9,7 @@ import { useLayoutEffect, useRef } from 'react'
 const WindowWrapper = (Component, windowKey) => {
     const Wrapped = (props) => {
         const { focusWindow, windows } = useWindowStore();
+        const { isDarkMode } = useThemeStore();
         const win = windows[windowKey];
         if (!win) {
             console.error(`WindowWrapper: Invalid windowKey "${windowKey}"`);
@@ -56,7 +58,7 @@ const WindowWrapper = (Component, windowKey) => {
                 onMouseDown={() => focusWindow(windowKey)}
                 id={windowKey} ref={ref} 
                 style={{ zIndex }} 
-                className={`absolute ${
+                className={`absolute ${isDarkMode ? 'dark' : ''} ${
                     isMaximized 
                         ? 'top-0 left-0 !w-screen !h-screen !max-w-none !max-h-none' 
                         : 'top-16 left-20 max-w-[90vw] max-h-[85vh]'
