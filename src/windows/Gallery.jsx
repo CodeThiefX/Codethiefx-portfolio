@@ -5,11 +5,11 @@ import { photosLinks, gallery } from '#constants'
 import { WindowControls } from "#components"
 import WindowWrapper from "#hoc/WindowWrapper"
 import useWindowStore from "#store/window"
-// import { locations } from "#constants"
 
 const Gallery = ({ isMaximized }) => {
 
     const { openWindow } = useWindowStore();
+
   return (
     <div className={isMaximized ? 'h-full flex flex-col' : ''}>
         <div id='window-header'>

@@ -3,15 +3,15 @@ import { WindowControls } from '#components'
 import WindowWrapper from '#hoc/WindowWrapper'
 import { socials } from '#constants'
 
-const Contact = () => {
+const Contact = ({ isMaximized }) => {
   return (
-    <>
+    <div className={isMaximized ? 'h-full w-full flex flex-col' : 'w-3xl max-h-[70vh] flex flex-col'}>
         <div id='window-header'>    
             <WindowControls target="contact" />
             <h2>Contact Me</h2>
         </div>
 
-        <div className='p-8 space-y-6'>
+        <div className='p-8 space-y-6 flex-1 overflow-y-auto'>
             <div className='flex items-center gap-5'>
                 <img src="/images/adrian.jpg" alt="Codetheifx" className='w-24 h-24 rounded-full object-cover ring-4 ring-blue-100 shadow-lg transition-transform duration-300 hover:scale-105 hover:ring-blue-200' />
                 <div className='flex flex-col gap-1'>
@@ -61,7 +61,7 @@ const Contact = () => {
                 ))}
             </ul>
         </div>
-    </>
+    </div>
   )
 }
 

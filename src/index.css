@@ -163,43 +163,43 @@ body {
   }
 
   #terminal {
-    @apply w-xl absolute top-32 left-1/12 bg-[#1e1e1e] shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-xl absolute top-32 left-1/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
 
     #window-header {
-      @apply bg-[#2d2d2d] border-b border-[#3d3d3d] text-gray-300;
+      @apply bg-gray-50 border-b border-gray-200 text-gray-500;
     }
 
     h2 {
-      @apply font-bold text-sm text-center w-full text-gray-300;
+      @apply font-bold text-sm text-center w-full text-gray-700;
     }
 
     .techstack {
-      @apply text-sm font-roboto p-5 text-gray-100;
+      @apply text-sm font-roboto p-5 text-gray-800;
 
       .label {
-        @apply flex items-center ms-10 mt-7 text-gray-400;
+        @apply flex items-center ms-10 mt-7 text-gray-500;
       }
 
       .content {
-        @apply py-5 my-5 border-y border-dashed border-gray-600 space-y-1;
+        @apply py-5 my-5 border-y border-dashed border-gray-300 space-y-1;
 
         li {
           .check {
-            @apply text-[#4EC9B0] w-5;
+            @apply text-teal-600 w-5;
           }
 
           h3 {
-            @apply font-semibold text-[#4EC9B0] w-32 ms-5;
+            @apply font-semibold text-teal-600 w-32 ms-5;
           }
 
           ul {
-            @apply flex items-center gap-3 text-gray-300;
+            @apply flex items-center gap-3 text-gray-700;
           }
         }
       }
 
       .footnote {
-        @apply text-[#4EC9B0] space-y-1;
+        @apply text-teal-600 space-y-1;
 
         p {
           @apply flex items-center;
@@ -424,6 +424,49 @@ body {
 
       h2 {
         @apply text-gray-300;
+      }
+    }
+
+    /* Terminal dark mode */
+    &#terminal {
+      @apply bg-[#1e1e1e];
+
+      #window-header {
+        @apply bg-[#2d2d2d] border-[#3d3d3d] text-gray-300;
+      }
+
+      h2 {
+        @apply text-gray-300;
+      }
+
+      .techstack {
+        @apply text-gray-100;
+
+        .label {
+          @apply text-gray-400;
+        }
+
+        .content {
+          @apply border-gray-600;
+
+          li {
+            .check {
+              @apply text-[#4EC9B0];
+            }
+
+            h3 {
+              @apply text-[#4EC9B0];
+            }
+
+            ul {
+              @apply text-gray-300;
+            }
+          }
+        }
+
+        .footnote {
+          @apply text-[#4EC9B0];
+        }
       }
     }
 
