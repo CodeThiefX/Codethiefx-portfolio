@@ -34,8 +34,8 @@ const Gallery = ({ isMaximized }) => {
                 </ul>
             </div>
             
-            <div className="gallery max-h-[600px] overflow-y-auto">
-                <ul className={`${isMaximized ? 'h-full overflow-auto' : ''}`}>
+            <div className={`gallery max-h-fit overflow-y-auto ${isMaximized ? 'maximized' : ''}`}>
+                <ul>
                     {gallery.map(({ id, img }) => (
                         <li key={id} onClick={() => openWindow("imgfile", {
                             id,

@@ -254,20 +254,20 @@ body {
     }
 
     .gallery {
-      @apply p-5 flex-1 overflow-auto;
+      @apply p-5 flex-1;
 
       ul {
         @apply grid grid-cols-2 grid-rows-4 gap-2.5;
-
-        @media (min-width: 1024px) {
-          @apply grid-cols-4;
-        }
 
         li {
           img {
             @apply size-full object-cover rounded-lg;
           }
         }
+      }
+
+      &.maximized ul {
+        @apply grid-cols-4;
       }
     }
   }
