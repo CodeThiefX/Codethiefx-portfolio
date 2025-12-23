@@ -5,7 +5,7 @@ import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
 
-pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 
 import WindowWrapper from '#hoc/WindowWrapper'
@@ -19,7 +19,7 @@ const Resume = ({ isMaximized }) => {
             <h2>Resume.pdf</h2>
 
             <a 
-                href="files/resume.pdf" 
+                href="/files/resume.pdf" 
                 download 
                 className='cursor-pointer' 
                 title='Download Resume'
@@ -29,7 +29,7 @@ const Resume = ({ isMaximized }) => {
         </div>
 
         <div className={`overflow-y-auto ${isMaximized ? 'flex-1 flex justify-center bg-gray-100' : 'max-h-[550px]'}`}>
-            <Document file="files/resume.pdf" >
+            <Document file="/files/resume.pdf" >
                 <Page 
                     pageNumber={1} 
                     renderTextLayer 
