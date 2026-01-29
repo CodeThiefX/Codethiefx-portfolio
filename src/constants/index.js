@@ -48,12 +48,12 @@ const dockApps = [
     icon: "safari.png",
     canOpen: true,
   },
-  {
-    id: "photos",
-    name: "Gallery", // was "Photos"
-    icon: "photos.png",
-    canOpen: true,
-  },
+  // {
+  //   id: "photos",
+  //   name: "Gallery", // was "Photos"
+  //   icon: "photos.png",
+  //   canOpen: true,
+  // },
   {
     id: "contact",
     name: "Contact", // or "Get in touch"
@@ -217,22 +217,22 @@ const photosLinks = [
 ];
 
 const gallery = [
-  {
-    id: 1,
-    img: "/images/gal1.png",
-  },
-  {
-    id: 2,
-    img: "/images/gal2.png",
-  },
-  {
-    id: 3,
-    img: "/images/gal3.png",
-  },
-  {
-    id: 4,
-    img: "/images/gal4.png",
-  },
+  // {
+  //   id: 1,
+  //   img: "/images/gal1.png",
+  // },
+  // {
+  //   id: 2,
+  //   img: "/images/gal2.png",
+  // },
+  // {
+  //   id: 3,
+  //   img: "/images/gal3.png",
+  // },
+  // {
+  //   id: 4,
+  //   img: "/images/gal4.png",
+  // },
 ];
 
 export {
@@ -289,14 +289,14 @@ const WORK_LOCATION = {
           fileType: "img",
           imageUrl: "/images/surgechain.png",
         },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-        },
+        // {
+        //   id: 5,
+        //   name: "Design.fig",
+        //   icon: "/images/plain.png",
+        //   kind: "file",
+        //   fileType: "fig",
+        //   href: "https://google.com",
+        // },
       ],
     },
 
@@ -336,14 +336,14 @@ const WORK_LOCATION = {
           fileType: "img",
           imageUrl: "/images/sentfi.png",
         },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-        },
+        // {
+        //   id: 5,
+        //   name: "Design.fig",
+        //   icon: "/images/plain.png",
+        //   kind: "file",
+        //   fileType: "fig",
+        //   href: "https://google.com",
+        // },
       ],
     },
 
@@ -383,14 +383,14 @@ const WORK_LOCATION = {
           fileType: "img",
           imageUrl: "/images/valtrix.png",
         },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-        },
+        // {
+        //   id: 5,
+        //   name: "Design.fig",
+        //   icon: "/images/plain.png",
+        //   kind: "file",
+        //   fileType: "fig",
+        //   href: "https://google.com",
+        // },
       ],
     },
 
@@ -430,14 +430,14 @@ const WORK_LOCATION = {
           fileType: "img",
           imageUrl: "/images/mmit.png",
         },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-        },
+        // {
+        //   id: 5,
+        //   name: "Design.fig",
+        //   icon: "/images/plain.png",
+        //   kind: "file",
+        //   fileType: "fig",
+        //   href: "https://google.com",
+        // },
       ],
     },
 
@@ -477,14 +477,14 @@ const WORK_LOCATION = {
           fileType: "img",
           imageUrl: "/images/booklovo.png",
         },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-        },
+        // {
+        //   id: 5,
+        //   name: "Design.fig",
+        //   icon: "/images/plain.png",
+        //   kind: "file",
+        //   fileType: "fig",
+        //   href: "https://google.com",
+        // },
       ],
     },
 
@@ -524,14 +524,14 @@ const WORK_LOCATION = {
           fileType: "img",
           imageUrl: "/images/anchor.png",
         },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-        },
+        // {
+        //   id: 5,
+        //   name: "Design.fig",
+        //   icon: "/images/plain.png",
+        //   kind: "file",
+        //   fileType: "fig",
+        //   href: "https://google.com",
+        // },
       ],
     },
 
@@ -571,14 +571,14 @@ const WORK_LOCATION = {
           fileType: "img",
           imageUrl: "/images/tbm-events.png",
         },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-        },
+        // {
+        //   id: 5,
+        //   name: "Design.fig",
+        //   icon: "/images/plain.png",
+        //   kind: "file",
+        //   fileType: "fig",
+        //   href: "https://google.com",
+        // },
       ],
     },
 
@@ -618,14 +618,14 @@ const WORK_LOCATION = {
           fileType: "img",
           imageUrl: "/images/peter-leo.png",
         },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-        },
+        // {
+        //   id: 5,
+        //   name: "Design.fig",
+        //   icon: "/images/plain.png",
+        //   kind: "file",
+        //   fileType: "fig",
+        //   href: "https://google.com",
+        // },
       ],
     },
 
@@ -665,14 +665,14 @@ const WORK_LOCATION = {
           fileType: "img",
           imageUrl: "/images/avenue.png",
         },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-        },
+        // {
+        //   id: 5,
+        //   name: "Design.fig",
+        //   icon: "/images/plain.png",
+        //   kind: "file",
+        //   fileType: "fig",
+        //   href: "https://google.com",
+        // },
       ],
     },
 
@@ -712,14 +712,14 @@ const WORK_LOCATION = {
           fileType: "img",
           imageUrl: "/images/wages.png",
         },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-        },
+        // {
+        //   id: 5,
+        //   name: "Design.fig",
+        //   icon: "/images/plain.png",
+        //   kind: "file",
+        //   fileType: "fig",
+        //   href: "https://google.com",
+        // },
       ],
     },
 
@@ -759,14 +759,14 @@ const WORK_LOCATION = {
           fileType: "img",
           imageUrl: "/images/mycliq.png",
         },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-        },
+        // {
+        //   id: 5,
+        //   name: "Design.fig",
+        //   icon: "/images/plain.png",
+        //   kind: "file",
+        //   fileType: "fig",
+        //   href: "https://google.com",
+        // },
       ],
     },
 
@@ -806,14 +806,14 @@ const WORK_LOCATION = {
           fileType: "img",
           imageUrl: "/images/sync360.png",
         },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-        },
+        // {
+        //   id: 5,
+        //   name: "Design.fig",
+        //   icon: "/images/plain.png",
+        //   kind: "file",
+        //   fileType: "fig",
+        //   href: "https://google.com",
+        // },
       ],
     },
 
@@ -853,14 +853,61 @@ const WORK_LOCATION = {
           fileType: "img",
           imageUrl: "/images/creator.png",
         },
+        // {
+        //   id: 5,
+        //   name: "Design.fig",
+        //   icon: "/images/plain.png",
+        //   kind: "file",
+        //   fileType: "fig",
+        //   href: "https://google.com",
+        // },
+      ],
+    },
+
+    // ▶ Project 14
+    {
+      id: 18,
+      name: "REELPAY",
+      icon: "/images/folder.png",
+      kind: "folder",
+      children: [
         {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
+          id: 1,
+          name: "REELPAY.txt",
+          icon: "/images/txt.png",
           kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
+          fileType: "txt",
+          description: [
+            "Reelpay is a creator marketplace platform that connects talented content creators with brands and hirers looking for their services.",
+            "Creators showcase their portfolio and content, while hirers can discover talent, send offers, and pay for work—all in one seamless platform.",
+            "Think of it like having a professional talent hub—where content creators get discovered, hired, and paid for their creative work.",
+            "Built with Next.js and a modern tech stack, it delivers a sleek experience for both creators and businesses looking to collaborate.",
+          ],
         },
+        {
+          id: 2,
+          name: "reelpay.co",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://reelpay.co/",
+        },
+        {
+          id: 4,
+          name: "reelpay.png",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          imageUrl: "/images/reelpay.png",
+        },
+        // {
+        //   id: 5,
+        //   name: "Design.fig",
+        //   icon: "/images/plain.png",
+        //   kind: "file",
+        //   fileType: "fig",
+        //   href: "https://google.com",
+        // },
       ],
     },
   ],

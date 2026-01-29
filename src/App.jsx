@@ -1,15 +1,23 @@
-import { Navbar, Welcome, Dock } from "#components"
-import { Safari, Terminal, Resume, Finder, TextViewer, ImageViewer, Contact, Home, Gallery } from "#windows";
+import { Navbar, Welcome, Dock } from "#components";
+import {
+  Safari,
+  Terminal,
+  Resume,
+  Finder,
+  TextViewer,
+  ImageViewer,
+  Contact,
+  Home,
+} from "#windows";
 
 // import gsap from "gsap";
 // import { Draggable } from "gsap/Draggable";
 // gsap.registerPlugin(Draggable);
 
 function App() {
-
   return (
     <main>
-      <Navbar/>
+      <Navbar />
       <Welcome />
       <Dock />
 
@@ -19,12 +27,12 @@ function App() {
       <Finder />
       <TextViewer />
       <ImageViewer />
-      
+
       <Contact />
-      <Gallery />
+      {/* <Gallery /> */}
       <Home />
     </main>
-  )
+  );
 }
 
-export default App
+export default App;

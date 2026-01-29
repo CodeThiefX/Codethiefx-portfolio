@@ -59,9 +59,12 @@ const Contact = ({ isMaximized }) => {
             <span className="text-[10px] sm:text-xs text-gray-400 uppercase tracking-wider font-medium">
               Email
             </span>
-            <p className="text-gray-700 text-xs sm:text-base font-semibold group-hover:text-blue-600 transition-colors">
-              codethiefx@gmail.com
-            </p>
+            <a
+              href="mailto:timiwade97@gmail.com"
+              className="text-gray-700 text-xs sm:text-base font-semibold group-hover:text-blue-600 transition-colors"
+            >
+              timiwade97@gmail.com
+            </a>
           </div>
         </div>
 
