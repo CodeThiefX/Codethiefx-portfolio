@@ -1,4 +1,4 @@
-import { Navbar, Welcome, Dock } from "#components";
+import { Navbar, Welcome, Dock, MobileOverlay } from "#components";
 import {
   Safari,
   Terminal,
@@ -17,6 +17,7 @@ import {
 function App() {
   return (
     <main>
+      <MobileOverlay />
       <Navbar />
       <Welcome />
       <Dock />
