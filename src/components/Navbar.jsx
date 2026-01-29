@@ -1,22 +1,21 @@
-import dayjs from 'dayjs'
+import dayjs from "dayjs";
 
-import React, { useState, useEffect } from 'react'
-import { navIcons, navLinks } from '#constants'
-import useWindowStore from '#store/window'
-import ThemeToggle from './ThemeToggle'
+import React, { useState, useEffect } from "react";
+import { navIcons, navLinks } from "#constants";
+import useWindowStore from "#store/window";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const { openWindow } = useWindowStore();
   const [isVisible, setIsVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-
   // check whether screen size is mobile
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 640);
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   useEffect(() => {
@@ -29,8 +28,8 @@ const Navbar = () => {
       }
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [isMobile]);
 
   const handleMouseLeave = () => {
@@ -40,30 +39,34 @@ const Navbar = () => {
   };
 
   return (
-    <nav 
-      className={`relative z-9999  ${!isMobile ? (isVisible ? 'nav-visible' : 'nav-hidden') : 'fixed w-full'}`}
+    <nav
+      className={`relative z-9999  ${!isMobile ? (isVisible ? "nav-visible" : "nav-hidden") : "fixed w-full"}`}
       onMouseLeave={handleMouseLeave}
     >
-        <div>
-            <img src="/images/logo.svg" alt="logo" className="w-5 h-5 sm:w-auto sm:h-auto" />
-            <p className='font-bold text-xs sm:text-base truncate'>Codetheifx</p>
+      <div>
+        <img
+          src="/images/logo.svg"
+          alt="logo"
+          className="w-5 h-5 sm:w-auto sm:h-auto"
+        />
+        <p className="font-bold text-xs sm:text-base truncate">CodeThiefx</p>
 
-            <ul>
-                {navLinks.map(({ id, name, type }) => (
-                    <li key={id} onClick={() => openWindow(type)}>
-                        <p>{name}</p>
-                    </li>
-                ))}
-            </ul>
-        </div>
+        <ul>
+          {navLinks.map(({ id, name, type }) => (
+            <li key={id} onClick={() => openWindow(type)}>
+              <p>{name}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
 
-        <div>
-            <ThemeToggle />
+      <div>
+        <ThemeToggle />
 
-            <time>{dayjs().format("ddd MMM D h:mm A")}</time>
-        </div>
+        <time>{dayjs().format("ddd MMM D h:mm A")}</time>
+      </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

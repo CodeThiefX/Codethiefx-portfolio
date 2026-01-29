@@ -14,7 +14,7 @@ const Contact = ({ isMaximized }) => {
       <div className="p-4 sm:p-8 space-y-4 sm:space-y-6 flex-1 overflow-y-auto">
         <div className="flex items-center gap-3 sm:gap-5">
           <img
-            src="/images/adrian.jpg"
+            src="/images/codethief.png"
             alt="Codetheifx"
             className="w-16 h-16 sm:w-24 sm:h-24 rounded-full object-cover ring-2 sm:ring-4 ring-blue-100 shadow-lg transition-transform duration-300 hover:scale-105 hover:ring-blue-200"
           />
@@ -60,7 +60,7 @@ const Contact = ({ isMaximized }) => {
               Email
             </span>
             <p className="text-gray-700 text-xs sm:text-base font-semibold group-hover:text-blue-600 transition-colors">
-              Codetheifx@gmail.com
+              codethiefx@gmail.com
             </p>
           </div>
         </div>

@@ -49,26 +49,32 @@ const Finder = ({ isMaximized, isMobile }) => {
         <Search className="icon" />
       </div>
 
-      <div className="bg-white dark:bg-[#1e1e1e] flex flex-1 h-0">
+      <div className="bg-white dark:bg-[#1e1e1e] flex flex-1 h-0 transition-all duration-300">
         <div
-          className={`sidebar ${openSidebar ? "w-full sm:w-48" : "w-20 sm:w-48"} h-full`}
+          className={`sidebar ${openSidebar ? "w-full sm:w-48" : "w-20 sm:w-48"} h-full transition-all duration-300`}
         >
           <div className="sm:hidden flex w-fit ml-auto cursor-pointer">
             {!openSidebar ? (
-              <ArrowRightIcon onClick={() => setOpenSidebar(true)} />
+              <ArrowRightIcon
+                className="cursor-pointer dark:text-white"
+                onClick={() => setOpenSidebar(true)}
+              />
             ) : (
-              <ArrowLeftIcon onClick={() => setOpenSidebar(false)} />
+              <ArrowLeftIcon
+                className={`cursor-pointer dark:text-white`}
+                onClick={() => setOpenSidebar(false)}
+              />
             )}
           </div>
 
           {renderList("Favorites", Object.values(locations))}
         </div>
 
-        <ul className="content h-full overflow-y-auto">
+        <ul className="content h-full overflow-y-auto ">
           {activeLocation?.children?.map((item) => (
             <li
               key={item.id}
-              className={`cursor-pointer `}
+              className={`cursor-pointer h-fit`}
               onClick={() => openItem(item)}
             >
               <img src={item.icon} alt={item.name} />

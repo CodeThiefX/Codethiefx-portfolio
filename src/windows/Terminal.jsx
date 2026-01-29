@@ -15,7 +15,7 @@ const Terminal = () => {
 
       <div className="techstack flex-1 overflow-y-auto">
         <p>
-          <span className="font-bold">@Codethief % </span>
+          <span className="font-bold">@CodeThief % </span>
           show tech stack
         </p>
 
