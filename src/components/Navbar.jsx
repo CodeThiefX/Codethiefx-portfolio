@@ -1,14 +1,25 @@
 import dayjs from "dayjs";
 
 import React, { useState, useEffect } from "react";
-import { navIcons, navLinks } from "#constants";
+import { navLinks } from "#constants";
 import useWindowStore from "#store/window";
 import ThemeToggle from "./ThemeToggle";
+import MenuBar from "./MenuBar";
+import { Bell } from "lucide-react";
 
-const Navbar = () => {
+const Navbar = ({ onNotificationClick }) => {
   const { openWindow } = useWindowStore();
   const [isVisible, setIsVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [time, setTime] = useState(dayjs().format("ddd MMM D  h:mm A"));
+
+  // Update time every second
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTime(dayjs().format("ddd MMM D  h:mm A"));
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   // check whether screen size is mobile
   useEffect(() => {
@@ -44,12 +55,8 @@ const Navbar = () => {
       onMouseLeave={handleMouseLeave}
     >
       <div>
-        <img
-          src="/images/logo.svg"
-          alt="logo"
-          className="w-5 h-5 sm:w-auto sm:h-auto"
-        />
-        <p className="font-bold text-xs sm:text-base truncate">CodeThiefx</p>
+        {/* Menu Bar with Apple menu and dropdowns */}
+        <MenuBar />
 
         <ul>
           {navLinks.map(({ id, name, type }) => (
@@ -60,10 +67,18 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div>
+      <div className="flex items-center gap-2">
+        {onNotificationClick && (
+          <button
+            onClick={onNotificationClick}
+            className="p-1 hover:bg-white/10 rounded transition-colors"
+            title="Notifications"
+          >
+            <Bell className="w-4 h-4 text-white/80 hover:text-white" />
+          </button>
+        )}
         <ThemeToggle />
-
-        <time>{dayjs().format("ddd MMM D h:mm A")}</time>
+        <time>{time}</time>
       </div>
     </nav>
   );

@@ -72,7 +72,7 @@ const dockApps = [
 const blogPosts = [
   {
     id: 1,
-    date: "Sep 2, 2025",
+    date: "Jan 15, 2026",
     title:
       "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
     image: "/images/blog1.png",
@@ -80,40 +80,39 @@ const blogPosts = [
   },
   {
     id: 2,
-    date: "Aug 28, 2025",
+    date: "Jan 10, 2026",
     title: "The Ultimate Guide to Flutter for Mobile Development",
     image: "/images/blog2.png",
     link: "https://youtu.be/3kaGC_DrUnw?si=JQjwtV-FxVhi5dNU",
   },
   {
     id: 3,
-    date: "Aug 15, 2025",
+    date: "Jan 5, 2026",
     title: "The Ultimate Guide to Mastering GSAP Animations",
     image: "/images/blog3.png",
     link: "https://youtu.be/AW1yfBKRMKc?si=ZrKw-7Ze1HCJvBGO",
   },
-  // {
-  //   id: 4,
-  //   date: "Sep 2, 2025",
-  //   title:
-  //     "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
-  //   image: "/images/blog1.png",
-  //   link: "https://jsmastery.com/blog/typescript-explained-what-it-is-why-it-matters-and-how-to-master-it",
-  // },
-  // {
-  //   id: 5,
-  //   date: "Aug 28, 2025",
-  //   title: "The Ultimate Guide to Mastering Three.js for 3D Development",
-  //   image: "/images/blog2.png",
-  //   link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-three-js-for-3d-development",
-  // },
-  // {
-  //   id: 6,
-  //   date: "Aug 15, 2025",
-  //   title: "The Ultimate Guide to Mastering GSAP Animations",
-  //   image: "/images/blog3.png",
-  //   link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-gsap-animations",
-  // },
+  {
+    id: 4,
+    date: "Dec 28, 2025",
+    title: "Building Modern DeFi Applications with React and Web3",
+    image: "/images/blog1.png",
+    link: "https://youtu.be/ZvZ7gvcmPmI?si=MEZr5TPduAGtzRVU",
+  },
+  {
+    id: 5,
+    date: "Dec 20, 2025",
+    title: "Next.js 15: What's New and How to Get Started",
+    image: "/images/blog2.png",
+    link: "https://youtu.be/3kaGC_DrUnw?si=JQjwtV-FxVhi5dNU",
+  },
+  {
+    id: 6,
+    date: "Dec 12, 2025",
+    title: "Creating Stunning UI Animations with Framer Motion",
+    image: "/images/blog3.png",
+    link: "https://youtu.be/AW1yfBKRMKc?si=ZrKw-7Ze1HCJvBGO",
+  },
 ];
 
 const techStack = [
@@ -1075,6 +1074,13 @@ const WINDOW_CONFIG = {
     data: null,
   },
   imgfile: {
+    isOpen: false,
+    isMinimized: false,
+    isMaximized: false,
+    zIndex: INITIAL_Z_INDEX,
+    data: null,
+  },
+  testimonials: {
     isOpen: false,
     isMinimized: false,
     isMaximized: false,
