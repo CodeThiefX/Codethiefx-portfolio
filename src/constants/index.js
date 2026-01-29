@@ -1,16 +1,11 @@
 const navLinks = [
   {
     id: 1,
-    name: "Projects",
-    type: "finder",
-  },
-  {
-    id: 3,
     name: "Contact",
     type: "contact",
   },
   {
-    id: 4,
+    id: 2,
     name: "Resume",
     type: "resume",
   },
