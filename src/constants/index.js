@@ -124,11 +124,11 @@ const blogPosts = [
 const techStack = [
   {
     category: "Frontend",
-    items: ["React.js", "Next.js", "TypeScript", "Angular"],
+    items: ["React.js", "Next.js", "TypeScript", "Angular", "Remix.js"],
   },
   {
     category: "Mobile",
-    items: ["React Native", "Expo", "Flutter"],
+    items: ["React Native", "Expo", "Dart(Flutter)"],
   },
   {
     category: "Styling",
@@ -136,15 +136,24 @@ const techStack = [
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express", "NestJS", "Python"],
+    items: ["Node.js", "Express", "NextJS", "Python", "Express.js"],
   },
   {
     category: "Database",
-    items: ["MongoDB", "PostgreSQL", "Supabase", "MySQL"],
+    items: ["MongoDB", "PostgreSQL", "Supabase", "SQL"],
   },
   {
     category: "Dev Tools",
-    items: ["Git", "GitHub", "Docker", "AI"],
+    items: [
+      "Git",
+      "GitHub",
+      "Docker",
+      "AI",
+      "Postman",
+      "Swagger",
+      "Figma",
+      "CI/CD pipelines",
+    ],
   },
 ];
 
@@ -154,21 +163,21 @@ const socials = [
     text: "Github",
     icon: "/icons/github.svg",
     bg: "#f4656b",
-    link: "https://github.com/JavaScript-Mastery-Pro",
+    link: "https://github.com/CodeThiefX",
   },
   {
     id: 2,
     text: "Platform",
     icon: "/icons/atom.svg",
     bg: "#4bcb63",
-    link: "https://jsmastery.com/",
+    // link: "https://jsmastery.com/",
   },
   {
     id: 3,
     text: "Twitter/X",
     icon: "/icons/twitter.svg",
     bg: "#ff866b",
-    link: "https://x.com/jsmasterypro",
+    link: "https://x.com/ceWayne_",
   },
   {
     id: 4,
@@ -247,17 +256,17 @@ const WORK_LOCATION = {
     // ▶ Project 1
     {
       id: 5,
-      name: "Nike Ecommerce Website Application",
+      name: "SURGECHAIN",
       icon: "/images/folder.png",
       kind: "folder",
       children: [
         {
           id: 1,
-          name: "Nike Project.txt",
+          name: "SURGECHAIN.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
-            description: [
+          description: [
             "The Nike eCommerce website is a sleek and modern platform designed for shopping the latest Nike collections.",
             "Instead of a simple online store, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
             "Think of it like walking into a flagship Nike store—but right from your phone or laptop.",
@@ -270,16 +279,15 @@ const WORK_LOCATION = {
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/fZdTYswuZjU?si=Awjl-pIst9e09_UU",
-  
+          href: "https://app.surgechain.io/",
         },
         {
           id: 4,
-          name: "nike.png",
+          name: "surgechain.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
-          imageUrl: "/images/project-1.png",
+          imageUrl: "/images/surgechain.png",
         },
         {
           id: 5,
@@ -288,7 +296,6 @@ const WORK_LOCATION = {
           kind: "file",
           fileType: "fig",
           href: "https://google.com",
-  
         },
       ],
     },
@@ -296,17 +303,17 @@ const WORK_LOCATION = {
     // ▶ Project 2
     {
       id: 6,
-      name: "AI Resume Analyzer",
+      name: "SENTFI",
       icon: "/images/folder.png",
       kind: "folder",
       children: [
         {
           id: 1,
-          name: "AI Resume Analyzer Project.txt",
+          name: "SENTFI.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
-            description: [
+          description: [
             "AI Resume Analyzer is a smart tool that helps you perfect your resume with instant feedback.",
             "Instead of guessing what recruiters want, you get AI-powered insights on keywords, formatting, and overall impact.",
             "Think of it like having a career coach—pointing out strengths, fixing weaknesses, and boosting your chances of landing interviews.",
@@ -315,19 +322,19 @@ const WORK_LOCATION = {
         },
         {
           id: 2,
-          name: "ai-resume-analyzer.com",
+          name: "sentfi.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/iYOz165wGkQ?si=R1hs8Legl200m0Cl",
+          href: "https://sentfi.jeremy0x.dev/",
         },
         {
           id: 4,
-          name: "ai-resume-analyzer.png",
+          name: "sentfi.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
-          imageUrl: "/images/project-2.png",
+          imageUrl: "/images/sentfi.png",
         },
         {
           id: 5,
@@ -343,17 +350,17 @@ const WORK_LOCATION = {
     // ▶ Project 3
     {
       id: 7,
-      name: "Food Delivery App",
+      name: "VALTRIX",
       icon: "/images/folder.png",
       kind: "folder",
       children: [
         {
           id: 1,
-          name: "Food Delivery App Project.txt",
+          name: "VALTRIX.txt",
           icon: "/images/txt.png",
           kind: "file",
           fileType: "txt",
-            description: [
+          description: [
             "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
             "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
             "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
@@ -362,20 +369,489 @@ const WORK_LOCATION = {
         },
         {
           id: 2,
-          name: "food-delivery-app.com",
+          name: "valtrix.com",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
-          href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
-  
+          href: "https://valtrix.jeremy0x.dev/",
         },
         {
           id: 4,
-          name: "food-delivery-app.png",
+          name: "valtrix.png",
           icon: "/images/image.png",
           kind: "file",
           fileType: "img",
-          imageUrl: "/images/project-3.png",
+          imageUrl: "/images/valtrix.png",
+        },
+        {
+          id: 5,
+          name: "Design.fig",
+          icon: "/images/plain.png",
+          kind: "file",
+          fileType: "fig",
+          href: "https://google.com",
+        },
+      ],
+    },
+
+    // ▶ Project 4
+    {
+      id: 8,
+      name: "MENTORMEINTECH",
+      icon: "/images/folder.png",
+      kind: "folder",
+      children: [
+        {
+          id: 1,
+          name: "MENTORMEINTECH.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          description: [
+            "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
+            "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
+            "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
+            "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
+          ],
+        },
+        {
+          id: 2,
+          name: "mentormeintech.com",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://mentormeintech.jeremy0x.dev/",
+        },
+        {
+          id: 4,
+          name: "mentormeintech.png",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          imageUrl: "/images/mmit.png",
+        },
+        {
+          id: 5,
+          name: "Design.fig",
+          icon: "/images/plain.png",
+          kind: "file",
+          fileType: "fig",
+          href: "https://google.com",
+        },
+      ],
+    },
+
+    // ▶ Project 5
+    {
+      id: 9,
+      name: "BOOKLOVO",
+      icon: "/images/folder.png",
+      kind: "folder",
+      children: [
+        {
+          id: 1,
+          name: "BOOKLOVO.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          description: [
+            "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
+            "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
+            "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
+            "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
+          ],
+        },
+        {
+          id: 2,
+          name: "booklovo.com",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://booklovo.com/",
+        },
+        {
+          id: 4,
+          name: "booklovo.png",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          imageUrl: "/images/booklovo.png",
+        },
+        {
+          id: 5,
+          name: "Design.fig",
+          icon: "/images/plain.png",
+          kind: "file",
+          fileType: "fig",
+          href: "https://google.com",
+        },
+      ],
+    },
+
+    // ▶ Project 6
+    {
+      id: 10,
+      name: "GETANCHOR",
+      icon: "/images/folder.png",
+      kind: "folder",
+      children: [
+        {
+          id: 1,
+          name: "GETANCHOR.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          description: [
+            "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
+            "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
+            "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
+            "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
+          ],
+        },
+        {
+          id: 2,
+          name: "getanchor.africa",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://getanchor.africa/",
+        },
+        {
+          id: 4,
+          name: "getanchor.png",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          imageUrl: "/images/anchor.png",
+        },
+        {
+          id: 5,
+          name: "Design.fig",
+          icon: "/images/plain.png",
+          kind: "file",
+          fileType: "fig",
+          href: "https://google.com",
+        },
+      ],
+    },
+
+    // ▶ Project 7
+    {
+      id: 11,
+      name: "TBM EVENTS",
+      icon: "/images/folder.png",
+      kind: "folder",
+      children: [
+        {
+          id: 1,
+          name: "TBM EVENTS.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          description: [
+            "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
+            "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
+            "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
+            "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
+          ],
+        },
+        {
+          id: 2,
+          name: "thetbmevents.com",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://thetbmevents.com/",
+        },
+        {
+          id: 4,
+          name: "tbmevents.png",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          imageUrl: "/images/tbm-events.png",
+        },
+        {
+          id: 5,
+          name: "Design.fig",
+          icon: "/images/plain.png",
+          kind: "file",
+          fileType: "fig",
+          href: "https://google.com",
+        },
+      ],
+    },
+
+    // ▶ Project 8
+    {
+      id: 12,
+      name: "PETER'S E-COMMERCE",
+      icon: "/images/folder.png",
+      kind: "folder",
+      children: [
+        {
+          id: 1,
+          name: "PETER'S E-COMMERCE.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          description: [
+            "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
+            "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
+            "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
+            "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
+          ],
+        },
+        {
+          id: 2,
+          name: "originalpeterleo.com",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://originalpeterleo.com/",
+        },
+        {
+          id: 4,
+          name: "peters-ecommerce.png",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          imageUrl: "/images/peters-leo.png",
+        },
+        {
+          id: 5,
+          name: "Design.fig",
+          icon: "/images/plain.png",
+          kind: "file",
+          fileType: "fig",
+          href: "https://google.com",
+        },
+      ],
+    },
+
+    // ▶ Project 9
+    {
+      id: 13,
+      name: "TT AVENUE",
+      icon: "/images/folder.png",
+      kind: "folder",
+      children: [
+        {
+          id: 1,
+          name: "TT AVENUE.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          description: [
+            "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
+            "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
+            "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
+            "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
+          ],
+        },
+        {
+          id: 2,
+          name: "ttavenue.com",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://ttavenue.com/",
+        },
+        {
+          id: 4,
+          name: "ttavenue.png",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          imageUrl: "/images/avenue.png",
+        },
+        {
+          id: 5,
+          name: "Design.fig",
+          icon: "/images/plain.png",
+          kind: "file",
+          fileType: "fig",
+          href: "https://google.com",
+        },
+      ],
+    },
+
+    // ▶ Project 10
+    {
+      id: 14,
+      name: "WAGES FINANCE",
+      icon: "/images/folder.png",
+      kind: "folder",
+      children: [
+        {
+          id: 1,
+          name: "WAGES FINANCE.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          description: [
+            "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
+            "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
+            "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
+            "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
+          ],
+        },
+        {
+          id: 2,
+          name: "wagesfinance.com",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://play.google.com/store/apps/details?id=com.wages.wages_finance&hl=en",
+        },
+        {
+          id: 4,
+          name: "wagesfinance.png",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          imageUrl: "/images/wageS.png",
+        },
+        {
+          id: 5,
+          name: "Design.fig",
+          icon: "/images/plain.png",
+          kind: "file",
+          fileType: "fig",
+          href: "https://google.com",
+        },
+      ],
+    },
+
+    // ▶ Project 11
+    {
+      id: 15,
+      name: "MYCLIQ",
+      icon: "/images/folder.png",
+      kind: "folder",
+      children: [
+        {
+          id: 1,
+          name: "TBM EVENTS.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          description: [
+            "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
+            "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
+            "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
+            "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
+          ],
+        },
+        {
+          id: 2,
+          name: "mycliq.com",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://play.google.com/store/apps/details?id=app.mycliq.user&hl=en",
+        },
+        {
+          id: 4,
+          name: "mycliq.png",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          imageUrl: "/images/mycliq.png",
+        },
+        {
+          id: 5,
+          name: "Design.fig",
+          icon: "/images/plain.png",
+          kind: "file",
+          fileType: "fig",
+          href: "https://google.com",
+        },
+      ],
+    },
+
+    // ▶ Project 12
+    {
+      id: 16,
+      name: "SYNC360",
+      icon: "/images/folder.png",
+      kind: "folder",
+      children: [
+        {
+          id: 1,
+          name: "SYNC360.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          description: [
+            "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
+            "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
+            "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
+            "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
+          ],
+        },
+        {
+          id: 2,
+          name: "sync360.com",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://play.google.com/store/apps/details?id=com.sync.sink&hl=en",
+        },
+        {
+          id: 4,
+          name: "sync360.png",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          imageUrl: "/images/sync360.png",
+        },
+        {
+          id: 5,
+          name: "Design.fig",
+          icon: "/images/plain.png",
+          kind: "file",
+          fileType: "fig",
+          href: "https://google.com",
+        },
+      ],
+    },
+
+    // ▶ Project 13
+    {
+      id: 17,
+      name: "CREATE TO EARN",
+      icon: "/images/folder.png",
+      kind: "folder",
+      children: [
+        {
+          id: 1,
+          name: "CREATE TO EARN.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          description: [
+            "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
+            "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
+            "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
+            "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
+          ],
+        },
+        {
+          id: 2,
+          name: "createtoearn.app",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://createtoearn.app/",
+        },
+        {
+          id: 4,
+          name: "createtorpng",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          imageUrl: "/images/creator.png",
         },
         {
           id: 5,
@@ -402,7 +878,7 @@ const ABOUT_LOCATION = {
       name: "me.png",
       icon: "/images/image.png",
       kind: "file",
-      fileType: "img",      
+      fileType: "img",
       imageUrl: "/images/adrian.jpg",
     },
     {
@@ -470,7 +946,7 @@ const TRASH_LOCATION = {
       name: "trash1.png",
       icon: "/images/image.png",
       kind: "file",
-      fileType: "img",      
+      fileType: "img",
       imageUrl: "/images/trash-1.png",
     },
     {
@@ -494,14 +970,62 @@ export const locations = {
 const INITIAL_Z_INDEX = 1000;
 
 const WINDOW_CONFIG = {
-  finder: { isOpen: false, isMinimized: false, isMaximized: false, zIndex: INITIAL_Z_INDEX, data: null },
-  contact: { isOpen: false, isMinimized: false, isMaximized: false, zIndex: INITIAL_Z_INDEX, data: null },
-  resume: { isOpen: false, isMinimized: false, isMaximized: false, zIndex: INITIAL_Z_INDEX, data: null },
-  safari: { isOpen: false, isMinimized: false, isMaximized: false, zIndex: INITIAL_Z_INDEX, data: null },
-  photos: { isOpen: false, isMinimized: false, isMaximized: false, zIndex: INITIAL_Z_INDEX, data: null },
-  terminal: { isOpen: false, isMinimized: false, isMaximized: false, zIndex: INITIAL_Z_INDEX, data: null },
-  txtfile: { isOpen: false, isMinimized: false, isMaximized: false, zIndex: INITIAL_Z_INDEX, data: null },
-  imgfile: { isOpen: false, isMinimized: false, isMaximized: false, zIndex: INITIAL_Z_INDEX, data: null },
+  finder: {
+    isOpen: false,
+    isMinimized: false,
+    isMaximized: false,
+    zIndex: INITIAL_Z_INDEX,
+    data: null,
+  },
+  contact: {
+    isOpen: false,
+    isMinimized: false,
+    isMaximized: false,
+    zIndex: INITIAL_Z_INDEX,
+    data: null,
+  },
+  resume: {
+    isOpen: false,
+    isMinimized: false,
+    isMaximized: false,
+    zIndex: INITIAL_Z_INDEX,
+    data: null,
+  },
+  safari: {
+    isOpen: false,
+    isMinimized: false,
+    isMaximized: false,
+    zIndex: INITIAL_Z_INDEX,
+    data: null,
+  },
+  photos: {
+    isOpen: false,
+    isMinimized: false,
+    isMaximized: false,
+    zIndex: INITIAL_Z_INDEX,
+    data: null,
+  },
+  terminal: {
+    isOpen: false,
+    isMinimized: false,
+    isMaximized: false,
+    zIndex: INITIAL_Z_INDEX,
+    data: null,
+  },
+  txtfile: {
+    isOpen: false,
+    isMinimized: false,
+    isMaximized: false,
+    zIndex: INITIAL_Z_INDEX,
+    data: null,
+  },
+  imgfile: {
+    isOpen: false,
+    isMinimized: false,
+    isMaximized: false,
+    zIndex: INITIAL_Z_INDEX,
+    data: null,
+  },
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };
