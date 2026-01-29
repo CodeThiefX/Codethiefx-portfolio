@@ -16,7 +16,7 @@ body {
   background-position: center;
 }
 
-@theme { 
+@theme {
   --font-georama: "Georama", sans-serif;
   --font-roboto: "Roboto Mono", monospace;
   --breakpoint-3xl: 1920px;
@@ -273,7 +273,7 @@ body {
         @apply grid-cols-4;
       }
       &.mobile ul {
-        @apply grid-cols-2
+        @apply grid-cols-2;
       }
     }
   }
@@ -616,4 +616,3 @@ body {
     }
   }
 }
-

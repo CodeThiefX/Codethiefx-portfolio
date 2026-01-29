@@ -16,7 +16,7 @@ import { WindowControls } from "#components";
 
 const Resume = ({ isMaximized }) => {
   return (
-    <div className={isMaximized ? "h-full flex flex-col" : ""}>
+    <div className="h-full w-full flex flex-col">
       <div id="window-header">
         <WindowControls target="resume" />
         <h2>Resume.pdf</h2>
@@ -33,9 +33,7 @@ const Resume = ({ isMaximized }) => {
         </a>
       </div>
 
-      <div
-        className={`overflow-y-auto ${isMaximized ? "flex-1 flex justify-center bg-gray-100" : "max-h-[550px]"}`}
-      >
+      <div className="flex-1 overflow-y-auto flex justify-center bg-gray-100">
         <Document file="/files/resume.pdf">
           <Page pageNumber={1} renderTextLayer renderAnotationLayer />
         </Document>

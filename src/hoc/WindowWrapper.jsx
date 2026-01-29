@@ -86,8 +86,8 @@ const WindowWrapper = (Component, windowKey) => {
         style={{ zIndex }}
         className={`absolute ${isDarkMode ? "dark" : ""} ${
           effectiveMaximized
-            ? "top-0 left-0 !w-screen !h-screen !max-w-none !max-h-none overflow-hidden"
-            : "top-10 left-20 max-w-fit max-h-[80vh] overflow-hidden"
+            ? "top-0 left-0 w-screen! h-screen! max-w-none max-h-none overflow-hidden"
+            : "top-[12%] left-[15%] w-[70vw] h-[45vh] overflow-auto rounded-xl shadow-2xl"
         }`}
       >
         <Component

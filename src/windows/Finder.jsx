@@ -43,17 +43,15 @@ const Finder = ({ isMaximized, isMobile }) => {
   );
 
   return (
-    <div className={isMaximized ? "h-full flex flex-col" : ""}>
+    <div className="h-full w-full flex flex-col">
       <div id="window-header">
         <WindowControls target="finder" />
         <Search className="icon" />
       </div>
 
-      <div
-        className={`bg-white dark:bg-[#1e1e1e] flex ${isMaximized ? "flex-1 h-0" : "h-full"}`}
-      >
+      <div className="bg-white dark:bg-[#1e1e1e] flex flex-1 h-0">
         <div
-          className={`sidebar ${openSidebar ? "w-full sm:w-48" : "w-20 sm:w-48"}  ${isMaximized ? "h-full" : ""}`}
+          className={`sidebar ${openSidebar ? "w-full sm:w-48" : "w-20 sm:w-48"} h-full`}
         >
           <div className="sm:hidden flex w-fit ml-auto cursor-pointer">
             {!openSidebar ? (
@@ -66,7 +64,7 @@ const Finder = ({ isMaximized, isMobile }) => {
           {renderList("Favorites", Object.values(locations))}
         </div>
 
-        <ul className={`content ${isMaximized ? "h-full overflow-auto" : ""}`}>
+        <ul className="content h-full overflow-y-auto">
           {activeLocation?.children?.map((item) => (
             <li
               key={item.id}
