@@ -894,6 +894,7 @@ const WORK_LOCATION = {
           fileType: "img",
           imageUrl: "/images/reelpay.png",
         },
+
         // {
         //   id: 5,
         //   name: "Design.fig",
@@ -902,6 +903,45 @@ const WORK_LOCATION = {
         //   fileType: "fig",
         //   href: "https://google.com",
         // },
+      ],
+    },
+
+    // ▶ Project 15
+    {
+      id: 19,
+      name: "FIZZI",
+      icon: "/images/folder.png",
+      kind: "folder",
+      children: [
+        {
+          id: 1,
+          name: "FIZZI.txt",
+          icon: "/images/txt.png",
+          kind: "file",
+          fileType: "txt",
+          description: [
+            "Fizzi is a refreshing soda brand focused on gut health, offering low-calorie, big-flavor drinks made with natural ingredients.",
+            "Each can is packed with prebiotics and 1 billion probiotics to support a happy, healthy digestive system.",
+            "Think of it like having a guilt-free treat—bold, refreshing taste with just 3-5g of sugar and 20 calories.",
+            "Built with a vibrant, modern design that reflects the product's natural and energetic spirit.",
+          ],
+        },
+        {
+          id: 2,
+          name: "fizzi.codethiefx.dev",
+          icon: "/images/safari.png",
+          kind: "file",
+          fileType: "url",
+          href: "https://fizzi.codethiefx.dev/",
+        },
+        {
+          id: 4,
+          name: "fizzi.png",
+          icon: "/images/image.png",
+          kind: "file",
+          fileType: "img",
+          imageUrl: "/images/fizzi.png",
+        },
       ],
     },
   ],
