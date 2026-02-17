@@ -2,7 +2,7 @@ import { WindowControls } from "#components";
 import WindowWrapper from "#hoc/WindowWrapper";
 import useWindowStore from "#store/window";
 
-const ImageViewer = () => {
+const ImageViewer = ({ onDragStart }) => {
   const { windows } = useWindowStore();
   const data = windows.imgfile?.data;
 
@@ -11,12 +11,12 @@ const ImageViewer = () => {
 
   return (
     <div className="h-full w-full flex flex-col">
-      <div id="window-header">
+      <div id="window-header" onPointerDown={onDragStart}>
         <WindowControls target="imgfile" />
         <h2>{name}</h2>
       </div>
 
-      <div className="p-4 bg-white flex-1 overflow-y-auto flex justify-center items-center">
+      <div className="p-4 bg-white dark:bg-[#2d2d2d] flex-1 overflow-y-auto flex justify-center items-center">
         {imageUrl ? (
           <div className="w-full flex justify-center items-center">
             <img

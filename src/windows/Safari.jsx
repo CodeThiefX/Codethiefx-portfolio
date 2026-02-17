@@ -14,10 +14,10 @@ import {
   MoveRight,
 } from "lucide-react";
 
-const Safari = ({ isMaximized, isMobile }) => {
+const Safari = ({ isMaximized, isMobile, onDragStart }) => {
   return (
     <div className="h-full w-full flex flex-col">
-      <div id="window-header">
+      <div id="window-header" onPointerDown={onDragStart}>
         <WindowControls target="safari" />
 
         <PanelLeft className="ml-10 icon hidden sm-flex" />

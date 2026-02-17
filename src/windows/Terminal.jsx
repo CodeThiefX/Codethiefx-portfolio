@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { Check, Flag } from "lucide-react";
 
 import { techStack, socials, locations } from "#constants";
@@ -31,9 +31,9 @@ const commands = {
     execute: () => ({
       type: "text",
       content: [
-        "┌─────────────────────────────────────┐",
+        "┌────────────────────────────────────┐",
         "│           ABOUT CODETHIEFX         │",
-        "├─────────────────────────────────────┤",
+        "├────────────────────────────────────┤",
         "│ Full-Stack Developer & Designer    │",
         "│ Building digital experiences that  │",
         "│ delight and inspire.               │",
@@ -41,7 +41,7 @@ const commands = {
         "│ Passionate about clean code,       │",
         "│ modern UI/UX, and creating         │",
         "│ impactful solutions.               │",
-        "└─────────────────────────────────────┘",
+        "└────────────────────────────────────┘",
       ],
     }),
   },
@@ -97,10 +97,64 @@ const commands = {
   },
 };
 
-const Terminal = () => {
+const TypewriterText = ({ text, onComplete, onUpdate, className }) => {
+  const [displayedText, setDisplayedText] = useState("");
+  const fullText = Array.isArray(text) ? text.join("\n") : text;
+  const indexRef = useRef(0);
+
+  useEffect(() => {
+    indexRef.current = 0;
+    setDisplayedText("");
+
+    // Calculate delay to ensure total duration < 2000ms
+    // Min delay 10ms, max delay 50ms
+    const totalDuration = 2000;
+    const calculatedDelay = Math.max(
+      10,
+      Math.min(50, totalDuration / fullText.length),
+    );
+    // If text is very long, type multiple chars per tick
+    const charsPerTick =
+      calculatedDelay === 10
+        ? Math.ceil(fullText.length / (totalDuration / 10))
+        : 1;
+
+    const intervalId = setInterval(() => {
+      if (indexRef.current < fullText.length) {
+        indexRef.current += charsPerTick;
+        // Ensure index doesn't exceed length, though slice handles it gracefully
+        setDisplayedText(fullText.slice(0, indexRef.current));
+        if (onUpdate) onUpdate();
+      } else {
+        clearInterval(intervalId);
+        // Ensure full text is displayed at end
+        setDisplayedText(fullText);
+        if (onUpdate) onUpdate();
+        if (onComplete) onComplete();
+      }
+    }, calculatedDelay);
+
+    return () => clearInterval(intervalId);
+  }, [fullText, onComplete, onUpdate]);
+
+  return (
+    <div className={`whitespace-pre-wrap ${className}`}>{displayedText}</div>
+  );
+};
+
+const Terminal = ({ onDragStart }) => {
   const [history, setHistory] = useState([
     { type: "system", content: "Welcome to CodeThiefx Terminal v1.0" },
     { type: "system", content: 'Type "help" for available commands.\n' },
+    {
+      type: "system",
+      content: (
+        <span>
+          <Flag size={15} fill="currentColor" className="inline mr-2" />
+          Interactive terminal ready
+        </span>
+      ),
+    },
   ]);
   const [input, setInput] = useState("");
   const [commandHistory, setCommandHistory] = useState([]);
@@ -108,11 +162,16 @@ const Terminal = () => {
   const inputRef = useRef(null);
   const terminalRef = useRef(null);
 
-  // Auto-scroll to bottom
-  useEffect(() => {
+  // Auto-scroll to bottom function
+  const scrollToBottom = useCallback(() => {
     if (terminalRef.current) {
       terminalRef.current.scrollTop = terminalRef.current.scrollHeight;
     }
+  }, []);
+
+  // Auto-scroll when history changes
+  useEffect(() => {
+    scrollToBottom();
   }, [history]);
 
   const executeCommand = (cmd) => {
@@ -142,10 +201,15 @@ const Terminal = () => {
           ...prev,
           { type: "skills", content: result.content },
         ]);
-      } else if (result.type === "list" || result.type === "text") {
+      } else if (result.type === "list") {
         setHistory((prev) => [
           ...prev,
-          { type: "output", content: result.content },
+          { type: "typewriter", content: result.content },
+        ]);
+      } else if (result.type === "text") {
+        setHistory((prev) => [
+          ...prev,
+          { type: "typewriter", content: result.content },
         ]);
       }
     } else {
@@ -191,7 +255,7 @@ const Terminal = () => {
       className="h-full w-full flex flex-col cursor-text"
       onClick={() => inputRef.current?.focus()}
     >
-      <div id="window-header">
+      <div id="window-header" onPointerDown={onDragStart}>
         <WindowControls target="terminal" />
         <h2>Terminal</h2>
       </div>
@@ -206,16 +270,29 @@ const Terminal = () => {
               <p className="text-teal-400">{entry.content}</p>
             )}
             {entry.type === "system" && (
-              <p className="text-gray-400">{entry.content}</p>
+              <div className="text-gray-400">{entry.content}</div>
             )}
             {entry.type === "error" && (
-              <p className="text-red-400">{entry.content}</p>
+              <div className="text-red-400">
+                <TypewriterText
+                  text={entry.content}
+                  onUpdate={scrollToBottom}
+                />
+              </div>
             )}
             {entry.type === "output" && (
               <div className="text-gray-300 whitespace-pre-wrap">
                 {entry.content.map((line, i) => (
                   <p key={i}>{line || "\u00A0"}</p>
                 ))}
+              </div>
+            )}
+            {entry.type === "typewriter" && (
+              <div className="text-gray-300">
+                <TypewriterText
+                  text={entry.content}
+                  onUpdate={scrollToBottom}
+                />
               </div>
             )}
             {entry.type === "skills" && (
@@ -232,7 +309,10 @@ const Terminal = () => {
                         {category}:
                       </span>
                       <span className="text-gray-300 ml-2">
-                        {items.join(", ")}
+                        <TypewriterText
+                          text={items.join(", ")}
+                          onUpdate={scrollToBottom}
+                        />
                       </span>
                     </div>
                   </div>
@@ -251,18 +331,10 @@ const Terminal = () => {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
-            className="flex-1 bg-transparent outline-none text-gray-500 caret-teal-400"
+            className="flex-1 bg-transparent outline-none text-teal-400 caret-teal-400"
             autoFocus
             spellCheck={false}
           />
-        </div>
-
-        {/* Footer */}
-        <div className="footnote mt-4">
-          <p>
-            <Flag size={15} fill="currentColor" className="inline mr-2" />
-            Interactive terminal ready
-          </p>
         </div>
       </div>
     </div>

@@ -83,7 +83,7 @@ const categories = [
   "Creator",
 ];
 
-const Gallery = ({ isMaximized }) => {
+const Gallery = ({ isMaximized, onDragStart }) => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [zoom, setZoom] = useState(1);
   const [activeCategory, setActiveCategory] = useState("All");
@@ -131,6 +131,7 @@ const Gallery = ({ isMaximized }) => {
     <div className="h-full flex flex-col bg-gray-100 dark:bg-gray-900">
       {/* Title Bar */}
       <div
+        onPointerDown={onDragStart}
         className="flex items-center justify-between px-4 py-2 bg-gray-200/80 dark:bg-gray-800/80 
                       backdrop-blur border-b border-gray-300 dark:border-gray-700"
       >

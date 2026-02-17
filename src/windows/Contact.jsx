@@ -3,10 +3,10 @@ import { WindowControls } from "#components";
 import WindowWrapper from "#hoc/WindowWrapper";
 import { socials } from "#constants";
 
-const Contact = ({ isMaximized }) => {
+const Contact = ({ isMaximized, onDragStart }) => {
   return (
     <div className="h-full w-full flex flex-col">
-      <div id="window-header">
+      <div id="window-header" onPointerDown={onDragStart}>
         <WindowControls target="contact" />
         <h2>Contact Me</h2>
       </div>
@@ -20,7 +20,7 @@ const Contact = ({ isMaximized }) => {
           />
 
           <div className="flex flex-col gap-0.5 sm:gap-1">
-            <h3 className="text-lg sm:text-2xl font-bold text-blue-800">
+            <h3 className="text-lg sm:text-2xl font-bold text-blue-800 dark:text-blue-300">
               Let's Connect
             </h3>
             <p className="text-gray-500 text-xs sm:text-sm font-medium">
@@ -29,17 +29,17 @@ const Contact = ({ isMaximized }) => {
           </div>
         </div>
 
-        <div className="h-px bg-gray-200"></div>
+        <div className="h-px bg-gray-200 dark:bg-gray-700"></div>
 
-        <div className="bg-blue-50 rounded-xl p-3 sm:p-5 border border-blue-100/50">
-          <p className="text-gray-600 leading-relaxed text-xs sm:text-sm">
+        <div className="bg-blue-50 dark:bg-blue-950/30 rounded-xl p-3 sm:p-5 border border-blue-100/50 dark:border-blue-800/30">
+          <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-xs sm:text-sm">
             💡 Got an idea? A bug to squash? Or just want to talk tech? I'm
             always excited to connect with fellow developers and creators. Let's
             build something amazing together!
           </p>
         </div>
 
-        <div className="flex items-center gap-2 sm:gap-3 bg-white rounded-lg px-3 sm:px-4 py-2 sm:py-3 border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 cursor-pointer group">
+        <div className="flex items-center gap-2 sm:gap-3 bg-white dark:bg-gray-800 rounded-lg px-3 sm:px-4 py-2 sm:py-3 border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300 cursor-pointer group">
           <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-blue-500 flex items-center justify-center text-white shadow-md">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +61,7 @@ const Contact = ({ isMaximized }) => {
             </span>
             <a
               href="mailto:timiwade97@gmail.com"
-              className="text-gray-700 text-xs sm:text-base font-semibold group-hover:text-blue-600 transition-colors"
+              className="text-gray-700 dark:text-gray-200 text-xs sm:text-base font-semibold group-hover:text-blue-600 transition-colors"
             >
               timiwade97@gmail.com
             </a>

@@ -136,7 +136,9 @@ const MenuDropdown = ({ menu, isOpen, onToggle, onClose }) => {
       <button
         onClick={onToggle}
         className={`flex items-center gap-1 px-2 py-0.5 rounded text-sm transition-colors ${
-          isOpen ? "bg-blue-500 text-white" : "hover:bg-gray-200/50"
+          isOpen
+            ? "bg-blue-500 text-white"
+            : "hover:bg-gray-200/50 dark:hover:bg-white/20"
         }`}
       >
         {menu.icon || menu.label}
@@ -149,13 +151,13 @@ const MenuDropdown = ({ menu, isOpen, onToggle, onClose }) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -5 }}
             transition={{ duration: 0.1 }}
-            className="absolute top-full left-0 mt-1 px-1 bg-white/95 dark:bg-gray-800/95 backdrop-blur-xl rounded-lg shadow-xl border border-gray-200/50 dark:border-gray-700/50 min-w-64 py-1 z-9999"
+            className="absolute gap-0 py-1 top-full left-0 mt-1 px-1 bg-white/95 dark:bg-gray-800/95 backdrop-blur-xl rounded-[9px] shadow-xl border border-gray-200/50 dark:border-gray-700/50 min-w-48 py-0.5 z-9999 flex flex-col"
           >
             {menu.items.map((item) =>
               item.type === "divider" ? (
                 <div
                   key={item.id}
-                  className="h-px bg-gray-200 dark:bg-gray-700 my-1"
+                  className="h-px bg-gray-200 dark:bg-gray-700 my-0"
                 />
               ) : (
                 <button

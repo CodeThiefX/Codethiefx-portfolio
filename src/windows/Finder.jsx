@@ -8,7 +8,7 @@ import { locations } from "#constants";
 import useLocationStore from "#store/location";
 import React, { useState } from "react";
 
-const Finder = ({ isMaximized, isMobile }) => {
+const Finder = ({ isMaximized, isMobile, onDragStart }) => {
   const { openWindow } = useWindowStore();
   const { activeLocation, setActiveLocation } = useLocationStore();
   const [openSidebar, setOpenSidebar] = useState(false);
@@ -44,7 +44,7 @@ const Finder = ({ isMaximized, isMobile }) => {
 
   return (
     <div className="h-full w-full flex flex-col">
-      <div id="window-header">
+      <div id="window-header" onPointerDown={onDragStart}>
         <WindowControls target="finder" />
         <Search className="icon" />
       </div>

@@ -173,13 +173,13 @@ const socials = [
     bg: "#ff866b",
     link: "https://x.com/ceWayne_",
   },
-  {
-    id: 3,
-    text: "LinkedIn",
-    icon: "/icons/linkedin.svg",
-    bg: "#05b6f6",
-    link: "https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all",
-  },
+  // {
+  //   id: 3,
+  //   text: "LinkedIn",
+  //   icon: "/icons/linkedin.svg",
+  //   bg: "#05b6f6",
+  //   link: "https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all",
+  // },
 ];
 
 const photosLinks = [
@@ -269,7 +269,7 @@ const WORK_LOCATION = {
         },
         {
           id: 2,
-          name: "nike.com",
+          name: "app.surgechain.io",
           icon: "/images/safari.png",
           kind: "file",
           fileType: "url",
@@ -956,15 +956,16 @@ const ABOUT_LOCATION = {
   children: [
     {
       id: 1,
-      name: "coming-soon.txt",
+      name: "about-me.txt",
       icon: "/images/txt.png",
       kind: "file",
       fileType: "txt",
-      subtitle: "Coming Soon",
+      subtitle: "Full Stack Developer | CS Student",
       description: [
-        "🚧 This section is under construction!",
-        "I'm currently working on adding my personal photos and a proper about me description.",
-        "Check back soon for updates!",
+        "Hey! I’m Promise Adesiyan (CodeThiefX) 👋, a Full Stack Developer and Computer Science student at FUTA, NG.",
+        "I love crafting interactive and responsive user interfaces, creating custom Telegram bots for automation, and developing cross-platform applications using Flutter & Dart.",
+        "I specialize in React, Next.js, and modern web technologies, always aiming to build software that feels smooth, looks great, and solves real problems.",
+        "When I'm not coding, I'm active in the developer community, contributing to open source, or exploring the latest in tech.",
       ],
     },
     // {

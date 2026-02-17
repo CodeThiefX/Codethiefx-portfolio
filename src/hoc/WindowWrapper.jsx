@@ -1,15 +1,8 @@
 import useWindowStore from "#store/window";
 import useThemeStore from "#store/theme";
 
-import { motion, useDragControls } from "framer-motion";
-import { useGSAP } from "@gsap/react";
-import {
-  useLayoutEffect,
-  useRef,
-  useState,
-  useEffect,
-  useCallback,
-} from "react";
+import { motion, useDragControls, AnimatePresence } from "framer-motion";
+import { useRef, useState, useEffect, useCallback } from "react";
 
 // Hook to detect mobile screen
 const useIsMobile = () => {
@@ -194,7 +187,7 @@ const WindowWrapper = (Component, windowKey) => {
       startX: 0,
       startY: 0,
       startWidth: 0,
-      startHeight: 0,
+      startHeight: size.height,
       startLeft: 0,
       startTop: 0,
       direction: null,
@@ -292,23 +285,8 @@ const WindowWrapper = (Component, windowKey) => {
       };
     }, [isResizing, position, windowKey, setWindowPosition]); // Added deps
 
-    useGSAP(() => {
-      const el = ref.current;
-      if (!el || !isOpen) return;
-      el.style.display = "block";
-    }, [isOpen]);
-
-    useLayoutEffect(() => {
-      const el = ref.current;
-      if (!el) return;
-      el.style.display = isOpen ? "block" : "none";
-    }, [isOpen]);
-
     // Determine animation state
     const getAnimateState = () => {
-      if (!isOpen) {
-        return { scale: 0, opacity: 0, y: 40, x: 0 };
-      }
       if (isMinimized) {
         return { scale: 0, opacity: 0, y: 100, x: 0 };
       }
@@ -340,41 +318,51 @@ const WindowWrapper = (Component, windowKey) => {
     };
 
     return (
-      <motion.section
-        initial={{ scale: 0.8, opacity: 0, y: 40 }}
-        animate={getAnimateState()}
-        transition={{ duration: isResizing ? 0 : 0.2, ease: "easeOut" }}
-        drag={!effectiveMaximized} // Enable drag capability, but turn off auto-listener
-        dragListener={false} // Disable default listener
-        dragControls={dragControls}
-        dragMomentum={false}
-        dragElastic={0}
-        onDragEnd={handleDragEnd}
-        onPointerDown={handlePointerDown}
-        id={windowKey}
-        ref={ref}
-        style={{
-          zIndex,
-          ...(effectiveMaximized
-            ? {}
-            : { width: size.width, height: size.height }),
-        }}
-        className={`absolute ${isDarkMode ? "dark" : ""} ${
-          effectiveMaximized
-            ? "top-0 left-0 w-screen! h-screen! max-w-none max-h-none overflow-hidden"
-            : "overflow-auto rounded-xl shadow-2xl"
-        }`}
-      >
-        <ResizeHandles
-          onResizeStart={handleResizeStart}
-          isMaximized={effectiveMaximized}
-        />
-        <Component
-          {...props}
-          isMaximized={effectiveMaximized}
-          isMobile={isMobile}
-        />
-      </motion.section>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.section
+            key={windowKey}
+            initial={{ scale: 0.8, opacity: 0, y: 40 }}
+            animate={getAnimateState()}
+            exit={{
+              scale: 0.75,
+              opacity: 0,
+              transition: { duration: 0.2 },
+            }}
+            transition={{ duration: isResizing ? 0 : 0.2, ease: "easeOut" }}
+            drag={!effectiveMaximized} // Enable drag capability, but turn off auto-listener
+            dragListener={false} // Disable default listener
+            dragControls={dragControls}
+            dragMomentum={false}
+            dragElastic={0}
+            onDragEnd={handleDragEnd}
+            id={windowKey}
+            ref={ref}
+            style={{
+              zIndex,
+              ...(effectiveMaximized
+                ? {}
+                : { width: size.width, height: size.height }),
+            }}
+            className={`absolute ${isDarkMode ? "dark" : ""} ${
+              effectiveMaximized
+                ? "top-0 left-0 w-screen! h-screen! max-w-none max-h-none overflow-hidden"
+                : "overflow-auto rounded-xl shadow-2xl"
+            }`}
+          >
+            <ResizeHandles
+              onResizeStart={handleResizeStart}
+              isMaximized={effectiveMaximized}
+            />
+            <Component
+              {...props}
+              isMaximized={effectiveMaximized}
+              isMobile={isMobile}
+              onDragStart={handlePointerDown}
+            />
+          </motion.section>
+        )}
+      </AnimatePresence>
     );
   };
 

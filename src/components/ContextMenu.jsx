@@ -85,7 +85,7 @@ const ContextMenu = ({ contextMenu, onAction }) => {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.95 }}
           transition={{ duration: 0.1 }}
-          className="fixed z-100000 bg-white/95 dark:bg-gray-800/95 backdrop-blur-xl rounded-xl shadow-2xl border border-gray-200/50 dark:border-gray-700/50 overflow-hidden py-1.5 min-w-48"
+          className="fixed z-100000 bg-white/95 dark:bg-gray-800/95 backdrop-blur-xl rounded-xl shadow-2xl border border-gray-200/50 dark:border-gray-700/50 overflow-hidden min-w-48"
           style={{ left: adjustedX, top: adjustedY }}
           onClick={(e) => e.stopPropagation()}
         >
@@ -93,7 +93,7 @@ const ContextMenu = ({ contextMenu, onAction }) => {
             item.type === "divider" ? (
               <div
                 key={`divider-${idx}`}
-                className="h-px bg-gray-200 dark:bg-gray-700 my-1.5"
+                className="h-px bg-gray-200 dark:bg-gray-700"
               />
             ) : (
               <button

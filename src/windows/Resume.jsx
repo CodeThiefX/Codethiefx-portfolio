@@ -14,10 +14,10 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 import WindowWrapper from "#hoc/WindowWrapper";
 import { WindowControls } from "#components";
 
-const Resume = ({ isMaximized }) => {
+const Resume = ({ isMaximized, onDragStart }) => {
   return (
     <div className="h-full w-full flex flex-col">
-      <div id="window-header">
+      <div id="window-header" onPointerDown={onDragStart}>
         <WindowControls target="resume" />
         <h2>Resume.pdf</h2>
 

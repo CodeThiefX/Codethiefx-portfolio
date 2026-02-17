@@ -72,7 +72,7 @@ const testimonials = [
   },
 ];
 
-const Testimonials = ({ isMaximized }) => {
+const Testimonials = ({ isMaximized, onDragStart }) => {
   const [selectedTestimonial, setSelectedTestimonial] = useState(null);
 
   return (
@@ -84,7 +84,10 @@ const Testimonials = ({ isMaximized }) => {
                       bg-gray-50 dark:bg-gray-850`}
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-700">
+        <div
+          onPointerDown={onDragStart}
+          className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-700"
+        >
           <div className="flex items-center gap-2">
             <div className="flex gap-2">
               <button className="w-3 h-3 rounded-full bg-red-500 hover:brightness-110" />

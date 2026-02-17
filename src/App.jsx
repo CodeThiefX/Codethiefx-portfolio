@@ -38,6 +38,10 @@ function App() {
 
   // Sync dark mode with DOM
   useEffect(() => {
+    useThemeStore.getState().initTheme();
+  }, []);
+
+  useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add("dark");
     } else {
